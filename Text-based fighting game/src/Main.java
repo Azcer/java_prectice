@@ -39,7 +39,7 @@ public class Main {
         System.out.println("创建成功！");
         tmp.showInfo();
         System.out.println("按回车继续");
-        String pause = sc.nextLine();
+        sc.nextLine();
         clear();
         return tmp;
     }
@@ -92,7 +92,8 @@ public class Main {
                         actionParty = 0;
                         break;
                 }
-
+                if(r2.getBlood()<=0)
+                    break;
             }
             if(actionParty == 1){
                 actionParty = 0;
@@ -116,7 +117,8 @@ public class Main {
                         actionParty = 1;
                         break;
                 }
-
+                if(r1.getBlood()<=0)
+                    break;
             }
         }
         if(r1.getBlood() <= 0){
